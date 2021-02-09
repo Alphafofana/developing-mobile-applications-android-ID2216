@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".LobbyActivity" >
         </activity>
+        <activity android:name=".EndGameActivity"
+        android:exported="true"></activity>
 
     </application>
 
