@@ -32,6 +32,20 @@
         app:layout_constraintVertical_bias="0.054"
         tools:text="Round x" />
 
+    <ProgressBar
+        android:id="@+id/midgameprogressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="273dp"
+        android:layout_height="21dp"
+        android:progress="50"
+        android:progressBackgroundTint ="@color/red"
+        android:progressTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midgameHeading"
+        app:layout_constraintVertical_bias="0.505" />
 
     <TextView
         android:id="@+id/midgameAlive"
@@ -48,7 +62,7 @@
         app:layout_constraintVertical_bias="0.166" />
 
     <TextView
-        android:id="@+id/midgameUserPlcaceholder1"
+        android:id="@+id/midgameAlivePlcaceholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
@@ -59,21 +73,7 @@
         app:layout_constraintStart_toStartOf="@+id/midgameAlive"
         app:layout_constraintTop_toBottomOf="@+id/midgameAlive"
         app:layout_constraintVertical_bias="0.036"
-        tools:text="User1" />
-
-    <TextView
-        android:id="@+id/midgameUserPlcaceholder2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/midgameAlive"
-        app:layout_constraintTop_toBottomOf="@+id/midgameAlive"
-        app:layout_constraintVertical_bias="0.099"
-        tools:text="User2" />
+        tools:text="Alive Users" />
 
     <View
         android:id="@+id/view2"
@@ -103,7 +103,7 @@
 
 
     <TextView
-        android:id="@+id/midgameUserPlcaceholder3"
+        android:id="@+id/midgameEliminatedPlcaceholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
@@ -114,7 +114,7 @@
         app:layout_constraintStart_toStartOf="@+id/midgameEliminatedRound"
         app:layout_constraintTop_toBottomOf="@+id/midgameEliminatedRound"
         app:layout_constraintVertical_bias="0.053"
-        tools:text="User3" />
+        tools:text="Eliminated Users" />
 
     <View
         android:id="@+id/view3"
@@ -159,6 +159,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="50dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

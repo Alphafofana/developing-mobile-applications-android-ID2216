@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import model.QuizGame;
@@ -25,21 +25,21 @@ public class MidGame extends AppCompatActivity {
         QuizGame game = (QuizGame) getIntent().getSerializableExtra("game");
 
         TextView round = findViewById(R.id.midgameHeading);
-        TextView placeholder1 = findViewById(R.id.midgameUserPlcaceholder1);
-        TextView placeholder2 = findViewById(R.id.midgameUserPlcaceholder2);
-        TextView placeholder3 = findViewById(R.id.midgameUserPlcaceholder3);
+        TextView alivePlaceholder = findViewById(R.id.midgameAlivePlcaceholder);
+        TextView eliminatedPlaceholder = findViewById(R.id.midgameEliminatedPlcaceholder);
+        ProgressBar progressBar= (ProgressBar)findViewById(R.id.midgameprogressBar);
 
         round.append(String.valueOf(game.getRound()));
 
         StringBuilder sb = new StringBuilder();
         game.getPlayingPlayers().stream().forEach(player -> sb.append(player + "\n"));
-        placeholder1.setText(sb.toString());
+        alivePlaceholder.setText(sb.toString());
 
-        new CountDownTimer(5000, 1000) {
+        new CountDownTimer(10000, 1) {
 
             @Override
             public void onTick(long millisUntilFinished) {
-
+                progressBar.setProgress((int)millisUntilFinished/100);
             }
 
             @Override
@@ -48,24 +48,6 @@ public class MidGame extends AppCompatActivity {
             }
         }.start();
 
-
-        /*
-        placeholder2.setText("");
-        placeholder3.setText("");
-        switch(status) {
-            case "case1":
-                plcaceholder1.setText("Rille");
-                plcaceholder3.setText("user");
-                break;
-            case "case2":
-                plcaceholder1.setText("user");
-                plcaceholder3.setText("Rille");
-                break;
-            default:
-                plcaceholder1.setText("Rille");
-                plcaceholder2.setText("user");
-        }
-        */
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
