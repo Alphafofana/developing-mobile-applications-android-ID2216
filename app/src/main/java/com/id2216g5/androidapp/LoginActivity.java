@@ -17,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText loginUsername;
     private EditText loginPassword;
     private Button loginButton;
+    private Button registerButton;
 
     String userName = "";
     String userPassword = "";
@@ -30,6 +31,14 @@ public class LoginActivity extends AppCompatActivity {
         loginUsername = findViewById(R.id.loginUsername);
         loginPassword = findViewById(R.id.loginPassword);
         loginButton = findViewById(R.id.loginbutton);
+        registerButton = findViewById(R.id.registerbutton);
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "Feature not available yet", Toast.LENGTH_LONG).show();
+            }
+        });
 
         /* Describe the logic when the login button is clicked */
         loginButton.setOnClickListener(new View.OnClickListener() {
