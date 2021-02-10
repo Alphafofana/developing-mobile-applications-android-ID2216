@@ -65,7 +65,7 @@ public class QuizGame {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void addKnockedOutPlayer(String knockedOutPlayer) {
-        playingPlayers = playingPlayers.stream().filter(player -> player.equals(knockedOutPlayer)).collect(Collectors.toList());
+        playingPlayers = playingPlayers.stream().filter(player -> !player.equals(knockedOutPlayer)).collect(Collectors.toList());
         knockedOutLastRound.add(knockedOutPlayer);
         over = !playingPlayers.isEmpty();
     }
