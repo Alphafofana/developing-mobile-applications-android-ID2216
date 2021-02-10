@@ -4,11 +4,12 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class QuizGame {
+public class QuizGame implements Serializable {
 
     private List<QuizQuestion> questions;
     private List<String> playingPlayers;
@@ -18,6 +19,8 @@ public class QuizGame {
     private boolean over;
 
     public QuizGame() {
+        this.knockedOutPlayers = new ArrayList<>();
+        this.knockedOutLastRound = new ArrayList<>();
         this.round = 1;
         this.over = false;
     }
@@ -57,6 +60,10 @@ public class QuizGame {
 
     public QuizQuestion getCurrentQuestion() {
         return questions.get(round - 1);
+    }
+
+    public int getRound() {
+        return round;
     }
 
     public boolean isOver() {

@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import model.QuizGame;
+
 public class EndGameActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -21,15 +23,14 @@ public class EndGameActivity extends AppCompatActivity {
 
         TextView winnerNameView = findViewById(R.id.endScreenWinnerName);
         TextView eliminatedNameView = findViewById(R.id.endScreenEliminatedUsers);
-        /* Expecting intent from previous screen
-        Intent intent = getIntent();
-        String winningUser = intent.getStringExtra();
-        List<String> eliminatedUsers = intent.getStringArrayListExtra();
-        winnerNameView.setText(winningUser);
-        eliminatedUsers.stream().forEach(user -> eliminatedNameView.append(user + '\n'));
-         */
-        winnerNameView.setText("Rillmeister");
-        eliminatedNameView.setText("user\nuser2\n");
+        QuizGame game = (QuizGame) getIntent().getSerializableExtra("game");
+
+        //Hårdkodat hack
+        winnerNameView.setText(game.getPlayingPlayers().get(0));
+        StringBuilder sb = new StringBuilder();
+        game.getKnockedOutPlayers().stream().forEach(player -> sb.append(player + '\n'));
+        game.getKnockedOutLastRound().stream().forEach(player -> sb.append(player + '\n'));
+        eliminatedNameView.setText(sb.toString());
     }
 
     public void backButton(View view) {

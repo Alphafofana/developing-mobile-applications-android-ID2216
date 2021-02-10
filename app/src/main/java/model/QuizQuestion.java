@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class QuizQuestion {
+public class QuizQuestion implements Serializable {
     private String question;
     private String correctAnswer;
     private List<String> wrongAnswers;

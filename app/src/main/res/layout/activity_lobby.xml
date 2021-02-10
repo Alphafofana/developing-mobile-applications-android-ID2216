@@ -35,6 +35,7 @@
         android:layout_width="273dp"
         android:layout_height="101dp"
         android:background="@color/light_blue"
+        android:onClick="joinGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/questionText"
                 android:layout_width="121dp"
                 android:layout_height="wrap_content"
                 android:text="Sport"
