@@ -10,4 +10,7 @@
     <string name="question_screen_alt_2">Banana</string>
     <string name="question_screen_alt_3">Pear</string>
     <string name="question_screen_alt_4">Grape</string>
+    <string name="midgame_layout_heading1">Alive</string>
+    <string name="midgame_layout_heading2">Eliminated this round</string>
+    <string name="midgame_layout_heading3">Eliminated</string>
 </resources>
