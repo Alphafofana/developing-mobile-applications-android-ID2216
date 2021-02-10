@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.369" />
 
     <TextView
-        android:id="@+id/endScreenEliminated"
+        android:id="@+id/midgameEliminatedRound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endScreenEliminated"
+        app:layout_constraintTop_toBottomOf="@+id/midgameEliminatedRound"
         app:layout_constraintVertical_bias="0.026" />
 
     <TextView
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endScreenEliminated" />
+        app:layout_constraintTop_toBottomOf="@+id/midgameEliminatedRound" />
 
     <Button
         android:id="@+id/endScreenBackButton"

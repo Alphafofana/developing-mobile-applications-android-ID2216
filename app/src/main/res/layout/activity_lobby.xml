@@ -8,7 +8,7 @@
     tools:context=".LobbyActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/midgameLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/logosmall" />
 
     <TextView
-        android:id="@+id/lobbyPlaceholder"
+        android:id="@+id/midgameHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lobby"
@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/midgameLogo"
         app:layout_constraintVertical_bias="0.054" />
 
     <TableLayout
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lobbyPlaceholder"
+        app:layout_constraintTop_toBottomOf="@+id/midgameHeading"
         app:layout_constraintVertical_bias="0.185">
 
         <TableRow
