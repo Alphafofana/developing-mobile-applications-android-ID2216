@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import model.QuizGame;
@@ -33,6 +35,7 @@ public class QuestionScreenActivity extends AppCompatActivity {
         alternativeThree = findViewById(R.id.alternativeThree);
         alternativeFour = findViewById(R.id.alternativeFour);
         questionText = findViewById(R.id.questionText);
+        ProgressBar progressBar= (ProgressBar)findViewById(R.id.questionprogressBar);
 
         QuizGame game = (QuizGame) getIntent().getSerializableExtra("game");
 
@@ -70,6 +73,19 @@ public class QuestionScreenActivity extends AppCompatActivity {
                 playerLose(game);
             }
         });
+
+        new CountDownTimer(10000, 1) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                progressBar.setProgress((int)millisUntilFinished/100);
+            }
+
+            @Override
+            public void onFinish() {
+                playerLose(game);
+            }
+        }.start();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)

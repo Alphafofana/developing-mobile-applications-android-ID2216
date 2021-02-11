@@ -64,19 +64,17 @@
         android:layout_height="100dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="32dp"
         android:background="@drawable/rounded_corners_10_dp"
         android:text="@string/question_screen_alt_1"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        tools:layout_editor_absoluteY="350dp" />
 
     <Button
         android:id="@+id/alternativeTwo"
         android:layout_width="140dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:background="@drawable/rounded_corners_10_dp"
@@ -84,7 +82,7 @@
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        tools:layout_editor_absoluteY="350dp" />
 
     <TextView
         android:id="@+id/questionText"
@@ -101,13 +99,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="260dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/questionprogressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="273dp"
+        android:layout_height="21dp"
+        android:progress="50"
+        android:progressBackgroundTint="@color/red"
+        android:progressTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionText" />
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:layout_constraintVertical_bias="0.076" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

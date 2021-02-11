@@ -13,8 +13,10 @@
     <string name="midgame_layout_heading1">Alive</string>
     <string name="midgame_layout_heading2">Eliminated this round</string>
     <string name="midgame_layout_heading3">Eliminated</string>
+    <string name="midgame_layout_waiting_text">Next round starts soon</string>
     <string name="login_screen_usename_hint">Username</string>
     <string name="login_screen_password_hint">Password</string>
     <string name="login_screen_Login_button">Login</string>
     <string name="login_screen_register_button">Register</string>
+
 </resources>
