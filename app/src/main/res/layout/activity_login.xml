@@ -57,14 +57,14 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corners"
         android:text="@string/login_screen_Login_button"
-        app:backgroundTint="@color/light_blue"
         android:textColor="@color/black"
+        app:backgroundTint="@color/light_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPassword"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.374" />
 
     <Button
         android:id="@+id/registerbutton"
@@ -78,8 +78,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPassword"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintTop_toBottomOf="@+id/loginbutton"
+        app:layout_constraintVertical_bias="0.202" />
 
     <TextView
         android:id="@+id/textView3"

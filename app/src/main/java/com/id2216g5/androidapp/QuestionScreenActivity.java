@@ -46,8 +46,17 @@ public class QuestionScreenActivity extends AppCompatActivity {
         alternativeFour.setText(game.getCurrentQuestion().getWrongAnswers().get(2));
         questionText.setText(game.getCurrentQuestion().getQuestion());
 
-        alternativeOne.setOnClickListener(new View.OnClickListener(){
+        timer = new CountDownTimer(10000, 1) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                progressBar.setProgress((int)millisUntilFinished/100);
+            }
 
+            @Override
+            public void onFinish() { playerLose(game); }
+        }.start();
+
+        alternativeOne.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 timer.cancel();
@@ -77,16 +86,6 @@ public class QuestionScreenActivity extends AppCompatActivity {
                 playerLose(game);
             }
         });
-
-        timer = new CountDownTimer(10000, 1) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                progressBar.setProgress((int)millisUntilFinished/100);
-            }
-
-            @Override
-            public void onFinish() { playerLose(game); }
-        }.start();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
