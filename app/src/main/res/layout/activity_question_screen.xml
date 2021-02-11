@@ -41,8 +41,10 @@
         android:text="@string/question_screen_alt_3"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alternativeOne" />
+        app:layout_constraintTop_toBottomOf="@+id/alternativeOne"
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/alternativeFour"
@@ -55,8 +57,10 @@
         android:text="@string/question_screen_alt_4"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alternativeTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/alternativeTwo"
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/alternativeOne"
@@ -64,19 +68,19 @@
         android:layout_height="100dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/rounded_corners_10_dp"
         android:text="@string/question_screen_alt_1"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionprogressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/questionText" />
 
     <Button
         android:id="@+id/alternativeTwo"
         android:layout_width="140dp"
         android:layout_height="100dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:background="@drawable/rounded_corners_10_dp"
@@ -84,7 +88,7 @@
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionprogressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/questionText" />
 
     <TextView
         android:id="@+id/questionText"

@@ -22,6 +22,7 @@ public class QuestionScreenActivity extends AppCompatActivity {
     private Button alternativeThree;
     private Button alternativeFour;
     private TextView questionText;
+    CountDownTimer timer;
 
     @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -49,13 +50,14 @@ public class QuestionScreenActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                playerLose(game);
-            }
+                timer.cancel();
+                playerLose(game); }
         });
 
         alternativeTwo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                timer.cancel();
                 playerWin(game);
             }
         });
@@ -63,6 +65,7 @@ public class QuestionScreenActivity extends AppCompatActivity {
         alternativeThree.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                timer.cancel();
                 playerLose(game);
             }
         });
@@ -70,21 +73,19 @@ public class QuestionScreenActivity extends AppCompatActivity {
         alternativeFour.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                timer.cancel();
                 playerLose(game);
             }
         });
 
-        new CountDownTimer(10000, 1) {
-
+        timer = new CountDownTimer(10000, 1) {
             @Override
             public void onTick(long millisUntilFinished) {
                 progressBar.setProgress((int)millisUntilFinished/100);
             }
 
             @Override
-            public void onFinish() {
-                playerLose(game);
-            }
+            public void onFinish() { playerLose(game); }
         }.start();
     }
 
